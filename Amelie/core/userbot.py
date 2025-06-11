@@ -5,7 +5,7 @@ from config import (
     String_client_1,
     String_client_2,
     String_client_3,
-    mustjoin
+    Mustjoin
 )
 
 userbots = []
@@ -34,9 +34,9 @@ async def restart_bots():
             me = await client.get_me()
             print(f"✅ Restarted userbot: {me.first_name} (@{me.username})")
             try:
-                await client.join_chat(mustjoin)
+                await client.join_chat(Mustjoin)
                 await client.send_message(
-                    chat_id=mustjoin,
+                    chat_id=Mustjoin,
                     text=(
                         "✅ **Userbot is started**\n"
                         f"**Name:** {me.first_name}\n"
@@ -44,8 +44,8 @@ async def restart_bots():
                         f"**User ID:** `{me.id}`"
                     )
                 )
-                print(f"📥 Joined and sent message in {mustjoin}")
+                print(f"📥 Joined and sent message in {Mustjoin}")
             except Exception as join_err:
-                print(f"⚠️ Failed to join or send message in {mustjoin}: {join_err}")
+                print(f"⚠️ Failed to join or send message in {Mustjoin}: {join_err}")
         except Exception as e:
             print(f"❌ Failed to restart userbot: {e}")
