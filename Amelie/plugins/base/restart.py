@@ -5,9 +5,9 @@ from datetime import datetime
 import pytz
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from Scott import app
+from Amelie import app
 from config import OWNER_ID, LOGGER_ID
-from Scott.plugins.base.logging_toggle import is_logging_enabled
+from Amelie.plugins.base.logging_toggle import is_logging_enabled
 
 @app.on_message(filters.command("restart"))
 async def restart_command_handler(client: Client, message: Message):

@@ -20,8 +20,8 @@ from config import (
 
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
-from Scott import app
-from Scott.core.mongo import session_db, register_data_db, group_log_db
+from Amelie import app
+from Amelie.core.mongo import session_db, register_data_db, group_log_db
 
 class InRegistrationFlow(filters.Filter):
     def __init__(self):

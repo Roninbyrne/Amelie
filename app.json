@@ -1,6 +1,6 @@
 {
-  "name": "Scott",
-  "description": "A feature-rich Telegram game bot for playing the classic Scott party game, built using Python, Pyrogram, and Py-Tgcalls.",
+  "name": "Amelie",
+  "description": "A feature-rich Telegram game bot for playing the classic Amelie party game, built using Python, Pyrogram, and Py-Tgcalls.",
   "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
   "keywords": [
     "python3",

@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ParseMode
-from Scott import app
-from Scott.core.mongo import session_db, register_data_db, video_channels_collection, user_states_collection
+from Amelie import app
+from Amelie.core.mongo import session_db, register_data_db, video_channels_collection, user_states_collection
 import logging
 import paypalrestsdk
 from config import PAYPAL_CLIENT_ID, PAYPAL_SECRET

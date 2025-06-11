@@ -43,7 +43,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 # GitHub repo
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Roninbyrne/Scott-bot")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Roninbyrne/Amelie-bot")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("git_token", None)
 
@@ -63,8 +63,8 @@ if SUPPORT_CHAT:
 
 # ============ EMAIL HTML TEMPLATES ============
 
-EMAIL_SUBJECT_OTP = "One Time Verification from Team Scott"
-EMAIL_SUBJECT_FINAL = "Your Registration Details from Team Scott"
+EMAIL_SUBJECT_OTP = "One Time Verification from Team Amelie"
+EMAIL_SUBJECT_FINAL = "Your Registration Details from Team Amelie"
 
 EMAIL_BODY_OTP = """
 <html>
@@ -85,8 +85,8 @@ EMAIL_BODY_OTP = """
         This is an automated message sent by our bot. Please do not reply directly to this email. For any queries, contact us at <a href="mailto:scottbothelpdesk@gmail.com">scottbothelpdesk@gmail.com</a>.
       </p>
 
-      <p>Thank you for choosing Team Scott!</p>
-      <p style="color: #555;">Best regards,<br><b>Team Scott</b></p>
+      <p>Thank you for choosing Team Amelie!</p>
+      <p style="color: #555;">Best regards,<br><b>Team Amelie</b></p>
     </div>
   </body>
 </html>
@@ -113,13 +113,13 @@ EMAIL_BODY_FINAL = """
         This is an automated message sent by our bot. Please do not reply directly to this email. For any queries, contact us at <a href="mailto:scottbothelpdesk@gmail.com">scottbothelpdesk@gmail.com</a>.
       </p>
 
-      <p style="color: #555;">Best regards,<br><b>Team Scott</b></p>
+      <p style="color: #555;">Best regards,<br><b>Team Amelie</b></p>
     </div>
   </body>
 </html>
 """
 
-EMAIL_SUBJECT_DELETE_OTP = "⚠️ Confirm Your Account Deletion - Team Scott"
+EMAIL_SUBJECT_DELETE_OTP = "⚠️ Confirm Your Account Deletion - Team Amelie"
 EMAIL_BODY_DELETE_OTP = """
 <html>
   <body style="font-family: Arial, sans-serif; background-color:#fff3f3; padding:20px;">
@@ -143,13 +143,13 @@ EMAIL_BODY_DELETE_OTP = """
         This is an automated message sent by our bot. Please do not reply directly to this email. For any queries, contact us at <a href="mailto:scottbothelpdesk@gmail.com">scottbothelpdesk@gmail.com</a>.
       </p>
 
-      <p style="color: #555;">Regards,<br><b>Team Scott</b></p>
+      <p style="color: #555;">Regards,<br><b>Team Amelie</b></p>
     </div>
   </body>
 </html>
 """
 
-EMAIL_SUBJECT_DELETE_FINAL = "✅ Account Successfully Deleted - Team Scott"
+EMAIL_SUBJECT_DELETE_FINAL = "✅ Account Successfully Deleted - Team Amelie"
 EMAIL_BODY_DELETE_FINAL = """
 <html>
   <body style="font-family: Arial, sans-serif; background-color:#f9fff9; padding:20px;">
@@ -168,7 +168,7 @@ EMAIL_BODY_DELETE_FINAL = """
         This is an automated message sent by our bot. Please do not reply directly to this email. For any queries, contact us at <a href="mailto:scottbothelpdesk@gmail.com">scottbothelpdesk@gmail.com</a>.
       </p>
 
-      <p style="color: #555;">Goodbye for now,<br><b>Team Scott</b></p>
+      <p style="color: #555;">Goodbye for now,<br><b>Team Amelie</b></p>
     </div>
   </body>
 </html>

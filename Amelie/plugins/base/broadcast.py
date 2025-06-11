@@ -2,8 +2,8 @@ import asyncio
 import time
 from pyrogram import filters
 from pyrogram.types import Message
-from Scott import app
-from Scott.core.mongo import global_userinfo_db, group_log_db
+from Amelie import app
+from Amelie.core.mongo import global_userinfo_db, group_log_db
 from config import LOGGER_ID, OWNER_ID
 
 

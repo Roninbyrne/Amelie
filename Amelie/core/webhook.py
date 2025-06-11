@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from Scott import app
-from Scott.core.mongo import video_channels_collection
+from Amelie import app
+from Amelie.core.mongo import video_channels_collection
 from pyrogram.errors import PeerIdInvalid
 
 app_webhook = Flask(__name__)

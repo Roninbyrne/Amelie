@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import OWNER_ID
-from Scott import app
-from Scott.core.mongo import mongodb
+from Amelie import app
+from Amelie.core.mongo import mongodb
 
 LOGGING_COLLECTION = mongodb.logging_config
 

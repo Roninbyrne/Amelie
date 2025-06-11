@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ParseMode
-from Scott import app 
-from Scott.core.mongo import group_log_db, global_userinfo_db
+from Amelie import app 
+from Amelie.core.mongo import group_log_db, global_userinfo_db
 from config import STATS_VIDEO
 
 @app.on_message(filters.command("stats"))

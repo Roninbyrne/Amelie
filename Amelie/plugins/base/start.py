@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from Scott import app
-from Scott.core.mongo import global_userinfo_db, video_channels_collection
-from Scott.plugins.base.logging_toggle import is_logging_enabled
+from Amelie import app
+from Amelie.core.mongo import global_userinfo_db, video_channels_collection
+from Amelie.plugins.base.logging_toggle import is_logging_enabled
 
 from config import (
     SUPPORT_CHAT,
