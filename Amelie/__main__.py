@@ -4,6 +4,7 @@ from pyrogram import idle
 from Amelie import LOGGER, app, start_bot
 from Amelie.plugins import ALL_MODULES
 from Amelie.core.chat_tracker import verify_groups_command
+from Amelie.core.userbot import restart_bots
 from config import OWNER_ID
 
 class DummyUser:
@@ -16,6 +17,7 @@ class DummyMessage:
         pass
 
 async def init():
+    await restart_bots()
     await start_bot()
 
     for all_module in ALL_MODULES:
