@@ -27,14 +27,18 @@ def register_userbot(client: Client):
         await message.edit_text("🔄 Ucasting with delay...")
 
         async for dialog in client.get_dialogs():
-            if dialog.chat.type == ChatType.PRIVATE and not dialog.chat.is_bot:
+            chat = dialog.chat
+            if chat.type == ChatType.PRIVATE:
+                user = await client.get_users(chat.id)
+                if user.is_bot:
+                    continue
                 try:
                     if reply and (reply.text or reply.caption):
-                        await client.send_message(dialog.chat.id, send_text)
+                        await client.send_message(chat.id, send_text)
                     elif reply and reply.media:
-                        await reply.copy(dialog.chat.id)
+                        await reply.copy(chat.id)
                     else:
-                        await client.send_message(dialog.chat.id, send_text)
+                        await client.send_message(chat.id, send_text)
 
                     sent_count += 1
                     await asyncio.sleep(1.2)
