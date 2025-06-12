@@ -17,6 +17,12 @@ BOT_TOKEN = "7964387907:AAHpPVsxt7ep99o-cZFgWOqsYZlWLAKCGtQ"
 # MongoDB connection string
 MONGO_DB_URI = "mongodb+srv://Combobot:Combobot@combobot.4jbtg.mongodb.net/?retryWrites=true&w=majority&appName=Combobot"
 
+String_client_1 = "BQGPvYcAhUkfHf38wIvJ_KxeXhQ7McM6oBCteXPzd5DsP3qKHq4gV7WKwg-5r7j1X1Kgtzr6kVKBLRO8JW4VLXIlnKM-31qCIuC05o-rNuDnz3rXWHwPMRGMMrUlEisOAhSg6kp5-9Qa9bcAoIE3OQj3WpOTTNR57diTMojazxUc7MN2zBs8MXrQ5os9FzvKfh9Sg6TvRvvHBjLLMQn6CR8dtXXPyJI3mrTMy7GOIlUKk1eYHep_U_2jnpHFLmNEWOSdbh7F33q4wcnVVbAbf4C859f_lLOF4RgYVHdQqYoglM2tBzJs8aArcHaw5KVRu_0BqwTOSJi-y2WzVCgcXSYVA36yMgAAAAHR1tKRAA"
+String_client_2 = ""
+String_client_3 = ""
+Mustjoin = "Phoenix_HLP"
+
+
 # --------------start.py-------------
 
 START_VIDEO = "https://i.ibb.co/nsyp67FS/Img2url-bot.jpg"
