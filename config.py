@@ -42,11 +42,6 @@ OWNER_ID = 7394132959
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-# GitHub repo
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Roninbyrne/Amelie-bot")
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
-GIT_TOKEN = getenv("git_token", None)
-
 # Support
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/PacificArc")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/phoenixXsupport")
