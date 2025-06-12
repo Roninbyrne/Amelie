@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
-from pyrogram.types import Message, ChatType
+from pyrogram.types import Message
+from pyrogram.enums import ChatType
 import asyncio
 
 def register_userbot(client: Client):
