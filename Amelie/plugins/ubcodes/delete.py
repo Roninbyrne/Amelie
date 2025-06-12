@@ -3,31 +3,40 @@ from pyrogram.types import Message
 import asyncio
 
 def register_userbot(client: Client):
-    @client.on_message(filters.command(["del"], prefixes=["."]) & (filters.group | filters.channel | filters.private) & filters.me)
-    async def purge(_, ctx: Message):
+    @client.on_message(
+        filters.command(["del"], prefixes=["."]) & filters.me
+    )
+    async def purge(c: Client, m: Message):
         try:
-            repliedmsg = ctx.reply_to_message
-            await ctx.delete()
+            repliedmsg = m.reply_to_message
+            await m.delete()
 
             if not repliedmsg:
-                error_msg = await ctx.reply_text("Reply to the message you want to delete.")
+                error_msg = await c.send_message(
+                    chat_id=m.chat.id,
+                    text="Reply to the message you want to delete."
+                )
                 await asyncio.sleep(2)
                 await error_msg.delete()
                 return
 
-            chat_id = ctx.chat.id
-
-            await _.delete_messages(
-                chat_id=chat_id,
-                message_ids=[repliedmsg.id],
+            await c.delete_messages(
+                chat_id=m.chat.id,
+                message_ids=repliedmsg.id,
                 revoke=True
             )
 
-            completion_msg = await ctx.reply_text("Message deleted.")
+            confirmation = await c.send_message(
+                chat_id=m.chat.id,
+                text="Message deleted."
+            )
             await asyncio.sleep(2)
-            await completion_msg.delete()
+            await confirmation.delete()
 
         except Exception as err:
-            error_msg = await ctx.reply_text(f"ERROR: {err}")
+            error_msg = await c.send_message(
+                chat_id=m.chat.id,
+                text=f"ERROR: {err}"
+            )
             await asyncio.sleep(5)
             await error_msg.delete()
