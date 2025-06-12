@@ -9,6 +9,7 @@ from config import (
     String_client_3,
     Mustjoin
 )
+from Amelie.plugins.userbot_handlers import add_userbot_handlers
 
 string_sessions = [String_client_1, String_client_2, String_client_3]
 
@@ -27,6 +28,7 @@ async def restart_bots():
                 session_string=session,
             )
             await client.start()
+            add_userbot_handlers(client)  # ✅ Register command handlers
             me = await client.get_me()
             LOGGER("Userbot").info(f"🟢 String_client_{i} started as {me.first_name} (@{me.username})")
 
