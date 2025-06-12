@@ -16,12 +16,12 @@ def register_userbot(client: Client):
                 user = await client.get_users(user_input)
                 user_id = user.id
             except Exception:
-                await message.reply_text("❌ This user doesn't exist.")
+                await message.edit_text("❌ This user doesn't exist.")
                 return
         elif reply and reply.from_user:
             user_id = reply.from_user.id
         else:
-            await message.reply_text("❌ Provide a username/user ID or reply to a user.")
+            await message.edit_text("❌ Provide a username/user ID or reply to a user.")
             return
 
         try:
@@ -59,11 +59,11 @@ def register_userbot(client: Client):
                     logging.error(f"Failed to get member status: {e}")
                     text = text.replace("DC ID:", "**Status:** Unknown\n**DC ID:**")
 
-            await message.reply_text(
+            await message.edit_text(
                 text,
                 disable_web_page_preview=True,
                 parse_mode=ParseMode.MARKDOWN
             )
 
         except Exception as e:
-            await message.reply_text(f"❌ Error: {e}")
+            await message.edit_text(f"❌ Error: {e}")
