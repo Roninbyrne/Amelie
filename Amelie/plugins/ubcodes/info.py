@@ -4,7 +4,7 @@ from pyrogram.enums import ParseMode, ChatMemberStatus
 import logging
 
 def register_userbot(client: Client):
-    @client.on_message(filters.command("userinfo", prefixes=".") & filters.me)
+    @client.on_message(filters.command("info", prefixes=".") & filters.me)
     async def userinfo_handler(_, message: Message):
         chat = message.chat
         reply = message.reply_to_message
