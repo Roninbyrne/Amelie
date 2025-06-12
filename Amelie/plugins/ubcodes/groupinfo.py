@@ -8,7 +8,7 @@ def register_userbot(client: Client):
         chat = message.chat
 
         if chat.type not in [ChatType.GROUP, ChatType.SUPERGROUP]:
-            await message.reply_text("❌ This command can only be used in groups or supergroups.")
+            await message.edit_text("❌ This command can only be used in groups or supergroups.")
             return
 
         try:
@@ -27,11 +27,11 @@ def register_userbot(client: Client):
                 f"**Description:**\n`{description}`"
             )
 
-            await message.reply_text(
+            await message.edit_text(
                 text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True
             )
 
         except Exception as e:
-            await message.reply_text(f"❌ Error: {e}")
+            await message.edit_text(f"❌ Error: {e}")
