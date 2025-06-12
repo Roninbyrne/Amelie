@@ -1,4 +1,4 @@
-from pyrogram import Client
+from pyrogram import Client, idle
 from pyrogram.errors import SessionRevoked, AuthKeyInvalid
 from Amelie import LOGGER
 from config import (
@@ -14,6 +14,7 @@ import pkgutil
 from Amelie.plugins import ubcodes
 
 string_sessions = [String_client_1, String_client_2, String_client_3]
+userbot_clients = []
 
 def load_userbot_handlers(client: Client):
     for _, module_name, _ in pkgutil.iter_modules(ubcodes.__path__):
@@ -59,7 +60,12 @@ async def restart_bots():
             except Exception as join_err:
                 LOGGER("Userbot").warning(f"⚠️ {me.first_name} failed to join/send in {Mustjoin}: {join_err}")
 
+            userbot_clients.append(client)
+
         except (SessionRevoked, AuthKeyInvalid):
             LOGGER("Userbot").error(f"🧟‍♂️ String_client_{i} is dead or revoked. Please generate a new one.")
         except Exception as e:
             LOGGER("Userbot").error(f"❌ Failed to start String_client_{i}: {e}")
+
+    if userbot_clients:
+        await idle()
