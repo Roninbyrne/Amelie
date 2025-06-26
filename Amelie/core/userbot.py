@@ -51,10 +51,10 @@ async def restart_bots():
                 await client.send_message(
                     chat_id=Mustjoin,
                     text=(
-                        "✅ **Userbot is started**\n"
-                        f"**Name:** {me.first_name}\n"
-                        f"**Username:** @{me.username if me.username else 'N/A'}\n"
-                        f"**User ID:** `{me.id}`"
+                        "✅ Userbot is started\n"
+                        f"Name: {me.first_name}\n"
+                        f"Username: @{me.username if me.username else 'N/A'}\n"
+                        f"User ID: `{me.id}`"
                     )
                 )
             except Exception as join_err:
