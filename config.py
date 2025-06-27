@@ -33,7 +33,7 @@ HELP_VIDEO_3 = "https://unitedcamps.in/Images/file_11453.jpg"
 HELP_VIDEO_4 = "https://unitedcamps.in/Images/file_11454.jpg"
 
 #------------------------------------
-
+RECORD_CHAT_ID = -1002059639505
 LOGGER_ID = -1002059639505
 STATS_VIDEO = "https://unitedcamps.in/Images/file_5250.jpg"
 OWNER_ID = 7394132959
