@@ -1,4 +1,4 @@
-from pyrogram import Client, idle
+from pyrogram import Client
 from pyrogram.errors import SessionRevoked, AuthKeyInvalid
 from Amelie import LOGGER
 from config import (
@@ -26,7 +26,7 @@ async def restart_bots():
                 api_id=API_ID,
                 api_hash=API_HASH,
                 session_string=session,
-                plugins={"root": "Amelie.plugins.ubcodes"},  # ✅ Auto-load handlers
+                plugins={"root": "Amelie.plugins.ubcodes"},
             )
             await client.start()
             me = await client.get_me()
@@ -53,6 +53,3 @@ async def restart_bots():
             LOGGER("Userbot").error(f"🧟‍♂️ String_client_{i} is dead or revoked. Please generate a new one.")
         except Exception as e:
             LOGGER("Userbot").error(f"❌ Failed to start String_client_{i}: {e}")
-
-    if userbot_clients:
-        await idle()
