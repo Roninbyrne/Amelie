@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus
 from pyrogram.types import ChatPermissions
+import asyncio
 
 @Client.on_message(filters.command("muteall", prefixes=["."]) & ~filters.private & filters.me)
 async def mute_all(client, message):
