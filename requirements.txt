@@ -14,6 +14,7 @@ MukeshAPI
 paypalrestsdk
 pillow
 psutil
+gpytranslate
 py-tgcalls==0.9.7
 pytz
 pykeyboard
