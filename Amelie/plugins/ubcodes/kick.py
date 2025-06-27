@@ -1,11 +1,10 @@
-
 from pyrogram import filters, Client
 from Amelie.plugins.ubcodes.admins import is_admin
 import asyncio
 
 @Client.on_message(filters.command("kick", prefixes=["."]) & ~filters.private & filters.me)
 async def kickuser(b, message):
-    if not is_admin(message.from_user.id, message):
+    if not await is_admin(message.from_user.id, message):
         await message.edit_text("You can't do that")
         await asyncio.sleep(3)
         await message.delete()
@@ -34,7 +33,7 @@ async def kickuser(b, message):
 
 @Client.on_message(filters.command("dkick", prefixes=["."]) & ~filters.private & filters.me)
 async def dkickuser(b, message):
-    if not is_admin(message.from_user.id, message):
+    if not await is_admin(message.from_user.id, message):
         await message.edit_text("You can't do that")
         await asyncio.sleep(3)
         await message.delete()
