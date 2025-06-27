@@ -1,5 +1,4 @@
-import logging
-from Amelie import app
+from Amelie import app, LOGGER
 from pyrogram import filters
 from pyrogram.types import Chat, ChatMemberUpdated, Message
 from pyrogram.enums import ChatMemberStatus, ChatAction
@@ -10,8 +9,7 @@ from Amelie.core.mongo import group_log_db
 from config import OWNER_ID, LOGGER_ID
 from Amelie.plugins.base.logging_toggle import is_logging_enabled
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("Amelie.core.bottrack")
+logger = LOGGER("Amelie.core.bottrack")
 
 @app.on_chat_member_updated()
 async def handle_bot_status_change(client, update: ChatMemberUpdated):
