@@ -12,7 +12,7 @@ API_ID = 20948356
 API_HASH = "6b202043d2b3c4db3f4ebefb06f2df12"
 
 # Bot token from @BotFather
-BOT_TOKEN = "7703532604:AAEZO0Nk98N7EJcncvPzeoX1EqGi4L0_b5k"
+BOT_TOKEN = "8104180468:AAGWqz6bxxvyhMutrDk8Qd6GsINnlgPCQR0"
 
 # MongoDB connection string
 MONGO_DB_URI = "mongodb+srv://Combobot:Combobot@combobot.4jbtg.mongodb.net/?retryWrites=true&w=majority&appName=Combobot"
