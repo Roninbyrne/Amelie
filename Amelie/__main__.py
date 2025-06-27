@@ -18,6 +18,7 @@ class DummyMessage:
 
 async def init():
     await restart_bots()
+
     await start_bot()
 
     for all_module in ALL_MODULES:
@@ -31,11 +32,8 @@ async def init():
     except Exception as e:
         LOGGER("Amelie").warning(f"⚠️ Failed to verify groups on startup: {e}")
 
-    LOGGER("Amelie").info("🚀 Amelie Userbot Started Successfully.")
+    LOGGER("Amelie").info("🚀 Amelie Bot and Userbots Started Successfully.")
     await idle()
-
-    await app.stop()
-    LOGGER("Amelie").info("🛑 Stopping Amelie Userbot...")
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
