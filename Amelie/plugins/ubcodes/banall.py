@@ -4,7 +4,7 @@ from pyrogram.enums import ChatMembersFilter, ChatMemberStatus
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from Amelie import app
-
+import asyncio
 from config import RECORD_CHAT_ID
 
 UTC = ZoneInfo('UTC')
