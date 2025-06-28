@@ -26,9 +26,9 @@ def get_readable_time(delta: timedelta) -> str:
     minutes, seconds = divmod(remainder, 60)
     return f"{days}d {hours}h {minutes}m {seconds}s"
 
-AUTHORS = [7337748194, 7202110938, 7512713188, 1813320767]
-SUPPORT_CHAT_ID = -1002408883218
-SUPPORT_CHANNEL_ID = -1002059806687
+AUTHORS = [7337748194, 7394132959]
+SUPPORT_CHAT_ID = -1002059639505
+SUPPORT_CHANNEL_ID = -1002059639505
 
 async def get_user_id(user_query):
     try:
